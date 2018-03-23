@@ -39,18 +39,29 @@ const picArray = [
 ];
 let test = document.getElementById("button1");
 let test2 = document.getElementById("button2");
-let test3 = document.getElementById("button3");
 
 let modal = document.getElementById("myModal");
+let modal2 = document.getElementById("myModal2");
+
 
 let span = document.getElementsByClassName("close")[0];
+let span2 = document.getElementsByClassName("close2")[0];
 
-test.onclick = function() {
+
+test.onclick = function () {
     modal.style.display = "block";
+};
+
+test2.onclick = function() {
+    modal2.style.display = "block";
 };
 
 span.onclick = function () {
     modal.style.display = "none";
+};
+
+span2.onclick = function () {
+    modal2.style.display = "none";
 };
 
 window.onclick = function (event) {
