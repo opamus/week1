@@ -1,3 +1,4 @@
+'use strict';
 const picArray = [
     {
         "id": 12,
@@ -5,7 +6,10 @@ const picArray = [
         "category": "Wife",
         "title": "Title 1",
         "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.",
-        "coordinates": { "lat": 60.2196781, "lng": 24.8079786 },
+        "coordinates": {
+            "lat": 60.2196781,
+            "lng": 24.8079786
+        },
         "thumbnail": "http://placekitten.com/320/300",
         "image": "http://placekitten.com/768/720",
         "original": "http://placekitten.com/2048/1920"
@@ -32,6 +36,27 @@ const picArray = [
         "image": "http://placekitten.com/769/720",
         "original": "http://placekitten.com/2039/1920"
     }
-]
+];
+let test = document.getElementById("button1");
+let test2 = document.getElementById("button2");
+let test3 = document.getElementById("button3");
 
-let test = document.getElementById("button1").src = "http://placekitten.com/768/720";
+let modal = document.getElementById("myModal");
+
+let span = document.getElementsByClassName("close")[0];
+
+test.onclick = function() {
+    modal.style.display = "block";
+};
+
+span.onclick = function () {
+    modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+
