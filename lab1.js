@@ -37,42 +37,63 @@ const picArray = [
         "original": "http://placekitten.com/2039/1920"
     }
 ];
-let test = document.getElementById("button1");
-let test2 = document.getElementById("button2");
-let test3 = document.getElementById("button3");
 
-let modal = document.getElementById("myModal");
-let modal2 = document.getElementById("myModal2");
-let modal3 = document.getElementById("myModal3");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+
+const test = document.getElementById("button1");
+const test2 = document.getElementById("button2");
+const test3 = document.getElementById("button3");
+
+const modal = document.getElementById("myModal");
+const modal2 = document.getElementById("myModal2");
+const modal3 = document.getElementById("myModal3");
+
+const span = document.getElementsByClassName("close")[0];
+const span2 = document.getElementsByClassName("close2")[0];
+const span3 = document.getElementsByClassName("close3")[0];
+
+const category = document.getElementById("wife");
+const category2 = document.getElementById("girlfriend");
 
 
-let span = document.getElementsByClassName("close")[0];
-let span2 = document.getElementsByClassName("close2")[0];
-let span3 = document.getElementsByClassName("close3")[0];
+category.addEventListener('click', (evt)=>{
+    image1.style.display ="none";
+});
 
+category2.addEventListener('click', (evt)=>{
+    image2.style.display ="none";
+    image3.style.display ="none";
+    image3.style.display ="inline-block";
+});
 
-test.onclick = function () {
+/*category.onclick = function () {
+    image1.style.display = "none";
+}; */
+
+test.addEventListener('click', (evt)=>{
     modal.style.display = "block";
-};
+});
 
-test2.onclick = function() {
+test2.addEventListener('click', (evt)=>{
     modal2.style.display = "block";
-};
+});
 
-test3.onclick = function() {
+test3.addEventListener('click', (evt)=>{
     modal3.style.display = "block";
-};
+});
 
-span.onclick = function () {
+span.addEventListener('click', (evt)=>{
     modal.style.display = "none";
-};
+});
 
-span2.onclick = function () {
+span2.addEventListener('click', (evt)=>{
     modal2.style.display = "none";
-};
+});
 
-span3.onclick = function () {
+span3.addEventListener('click', (evt)=>{
     modal3.style.display = "none";
-};
+});
 
 
