@@ -35,6 +35,8 @@ const picArray = [
     }
 ];
 
+// Declare images, modals, buttons
+
 const image1 = document.getElementById("image1");
 const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
@@ -55,24 +57,31 @@ const category = document.getElementById("wife");
 const category2 = document.getElementById("girlfriend");
 const category3 = document.getElementById("showall");
 
+const time1 = document.getElementById("time1");
+const time2 = document.getElementById("time2");
+const time3 = document.getElementById("time3");
+
+const desc1 = document.getElementById("desc1");
+const desc2 = document.getElementById("desc2");
+const desc3 = document.getElementById("desc3");
+
+
 /* const word1 = "title";
 const dates = picArray.filter(word => word.startsWith(word1));
 console.log(dates); */
 
+// Category sorting
 
 category.addEventListener('click', (evt)=>{
     image1.style.display="none";
     image2.style.display="inline-block";
     image3.style.display="inline-block";
-    category.removeEventListener(evt);
 });
 
 category2.addEventListener('click', (evt)=>{
     image1.style.display="inline-block";
     image2.style.display="none";
     image3.style.display="none";
-    category2.removeEventListener(evt);
-
 });
 
 category3.addEventListener('click', (evt)=>{
@@ -91,16 +100,25 @@ category3.addEventListener('click', (evt)=>{
     image1.style.display = "none";
 }; */
 
+
+// Display and close modals
+
 test.addEventListener('click', (evt)=>{
     modal.style.display = "block";
+    desc1.innerHTML = picArray[0].details;
+    time1.innerHTML = picArray[0].time;
 });
 
 test2.addEventListener('click', (evt)=>{
     modal2.style.display = "block";
+    time2.innerHTML = picArray[1].time;
+    desc2.innerHTML = picArray[1].details;
 });
 
 test3.addEventListener('click', (evt)=>{
     modal3.style.display = "block";
+    time3.innerHTML = picArray[2].time;
+    desc3.innerHTML = picArray[2].details;
 });
 
 span.addEventListener('click', (evt)=>{
