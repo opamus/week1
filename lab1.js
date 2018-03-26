@@ -6,10 +6,7 @@ const picArray = [
         "category": "Wife",
         "title": "Title 1",
         "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.",
-        "coordinates": {
-            "lat": 60.2196781,
-            "lng": 24.8079786
-        },
+        "coordinates": { "lat": 60.2196781, "lng": 24.8079786 },
         "thumbnail": "http://placekitten.com/320/300",
         "image": "http://placekitten.com/768/720",
         "original": "http://placekitten.com/2048/1920"
@@ -56,17 +53,39 @@ const span3 = document.getElementsByClassName("close3")[0];
 
 const category = document.getElementById("wife");
 const category2 = document.getElementById("girlfriend");
+const category3 = document.getElementById("showall");
+
+/* const word1 = "title";
+const dates = picArray.filter(word => word.startsWith(word1));
+console.log(dates); */
 
 
 category.addEventListener('click', (evt)=>{
-    image1.style.display ="none";
+    image1.style.display="none";
+    image2.style.display="inline-block";
+    image3.style.display="inline-block";
+    category.removeEventListener(evt);
 });
 
 category2.addEventListener('click', (evt)=>{
+    image1.style.display="inline-block";
+    image2.style.display="none";
+    image3.style.display="none";
+    category2.removeEventListener(evt);
+
+});
+
+category3.addEventListener('click', (evt)=>{
+    image1.style.display="inline-block";
+    image2.style.display="inline-block";
+    image3.style.display="inline-block";
+});
+
+/* category2.addEventListener('click', (evt)=>{
     image2.style.display ="none";
     image3.style.display ="none";
     image3.style.display ="inline-block";
-});
+}); */
 
 /*category.onclick = function () {
     image1.style.display = "none";
@@ -95,5 +114,6 @@ span2.addEventListener('click', (evt)=>{
 span3.addEventListener('click', (evt)=>{
     modal3.style.display = "none";
 });
+
 
 
